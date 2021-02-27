@@ -1,0 +1,11 @@
+.history {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width: 30rem;
+  padding: 10px;
+  transform: translateX(-50%);
+}
+/* 
+.history:not(:last-child) {
+} */
