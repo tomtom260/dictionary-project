@@ -1,0 +1,28 @@
+.searchbar {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+  height: 30px;
+  border-radius: 30px;
+  outline: none;
+  padding: 8px 10px;
+  padding-left: 15px;
+  transition: all 0.15s;
+}
+
+.searchbar--primary {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.searchbar--secondary {
+  position: absolute;
+  top: 20px;
+  left: 45%;
+  transform: translateX(-50%);
+  border: none;
+  border-bottom: solid 1px black;
+  border-radius: 0;
+}

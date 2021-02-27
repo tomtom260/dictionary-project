@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from "react"
+import ReactDOM from "react-dom"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import Logo from "./Logo/Logo.js"
+import Results from "./Results/Results.js"
+import SearchBar from "./Searchbar/Searchbar"
+import "./App.css"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  const [inputFocused, setInputFocused] = useState(false)
+
+  const changeInputFocused = isFocused => {
+    setInputFocused(isFocused)
+  }
+
+  return (
+    <React.StrictMode>
+      <Logo variant={inputFocused ? "secondary" : "primary"} />
+      <SearchBar
+        variant={inputFocused ? "secondary" : "primary"}
+        changeInputFocused={changeInputFocused}
+      />
+      <Results />
+    </React.StrictMode>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById("root"))
