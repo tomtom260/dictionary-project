@@ -13,7 +13,7 @@ function SearchInput({ variant, changeInputFocused, inputFocused }) {
         placeholder="Search for a word"
         className={"searchbar searchbar--" + variant}
       />
-      {inputFocused ? <History /> : null}
+      {/* {inputFocused ? <History /> : null} */}
     </div>
   )
 }
