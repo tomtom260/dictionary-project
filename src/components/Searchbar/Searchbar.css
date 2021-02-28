@@ -1,9 +1,10 @@
 .searchbar {
+  font-size: 2rem;
   width: 75%;
+  height: 15vh;
   padding: 0.3rem;
   position: relative;
   display: block;
-  height: 50px;
   border: none;
   outline: none;
   padding: 20px 10px;
@@ -12,10 +13,10 @@
 }
 
 .searchbox {
-  border-radius: 3rem;
+  border-radius: 0.8rem;
   border: 2px solid black;
   position: relative;
-  width: 55%;
+  width: 65rem;
   transform: translate(-50%, -50%);
   position: absolute;
   top: 25%;

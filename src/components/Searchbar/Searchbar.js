@@ -77,6 +77,7 @@ function SearchInput({ text, setText, fetchWord, fetchTranslation }) {
           onChange={e => setText(e.target.value)}
         />
         <Button
+          disabled={text === ""}
           onClick={() => {
             fetchWord(word)
             fetchTranslation(translation)

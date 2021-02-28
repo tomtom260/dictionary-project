@@ -1,12 +1,14 @@
 import React from "react"
 import "./Card.css"
 
-function Card({ word, translation }) {
+function Card({ word, translation, changeHistory }) {
   return (
     <div className="history__card">
       <h3>{word}</h3>
       <h2>{translation}</h2>
-      <div className="history__remove">x</div>
+      <div onClick={changeHistory} className="history__remove">
+        x
+      </div>
     </div>
   )
 }

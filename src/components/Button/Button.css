@@ -3,21 +3,29 @@
   outline: none;
 }
 
+.button:disabled {
+  background-color: lightblue;
+}
+
 .button--primary {
-  padding: 1rem 2rem;
-  width: 10rem;
+  padding: 1.5rem;
+  width: 12rem;
   border-radius: 10px;
   position: absolute;
-  bottom: 0.8rem;
+  bottom: 2.3rem;
   right: 1.5rem;
+  background-color: blue;
+  color: white;
+  text-align: center;
 }
 
 .button--secondary {
   padding: 15px 15px;
   width: 12rem;
+  /* border-right: 1px solid grey; */
 }
 
 .button--secondary--active {
-  border-bottom: 2px solid skyblue;
-  color: skyblue;
+  border-bottom: 2px solid blue;
+  color: blue;
 }
