@@ -3,12 +3,14 @@ import "./History.css"
 import Card from "./Card/Card"
 
 function History() {
+  const history = JSON.parse(localStorage.getItem("history"))
   return (
     <div className="history">
-      <Card word="Word" translation="Translation" />
-      <Card word="Word" translation="Translation" />
-      <Card word="Word" translation="Translation" />
-      <Card word="Word" translation="Translation" />
+      {history
+        ? history.map(el => (
+            <Card key={el.id} word={el.word} translation={el.translation} />
+          ))
+        : null}
     </div>
   )
 }

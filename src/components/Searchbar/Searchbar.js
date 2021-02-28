@@ -1,21 +1,91 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 
+import Button from "../Button/Button"
 import "./Searchbar.css"
-import History from "../History/History"
 import { intlContext } from "../../translations/IntlProvider"
+import Header from "./Header/Header"
 
-function SearchInput({ variant, changeInputFocused, inputFocused }) {
-  const { message } = useContext(intlContext)
+// localStorage.clear()
+// localStorage.setItem(
+//   "history",
+//   JSON.stringify([
+//     {
+//       id: Math.floor(Math.random() * 100000),
+//       word: "Word",
+//       translation: "Translation",
+//       from: "English",
+//       to: "Amharic",
+//     },
+//     {
+//       id: Math.floor(Math.random() * 100000),
+//       word: "Word",
+//       translation: "Translation",
+//       from: "English",
+//       to: "Amharic",
+//     },
+//     {
+//       id: Math.floor(Math.random() * 100000),
+//       word: "Word",
+//       translation: "Translation",
+//       from: "English",
+//       to: "Amharic",
+//     },
+//   ])
+// )
+
+const word = {
+  title: "Word",
+  exapmles: [
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+  ],
+  definition: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+  pronunciation: "\\thank\\",
+}
+
+const translation = {
+  title: "Translation",
+  exapmles: [
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+  ],
+  definition: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+  pronunciation: "\\thank\\",
+}
+
+function SearchInput({ text, setText, fetchWord, fetchTranslation }) {
+  const { locale, message } = useContext(intlContext)
+  const [lang, changeLang] = useState(locale)
+  // const [transTo, changeTransTo] = useState("am")
+  const [inputFocused, changeInputFocused] = useState(true)
+
   return (
-    <div className="searchBox">
-      <input
-        onBlur={() => changeInputFocused(false)}
-        onFocus={() => changeInputFocused(true)}
-        type="text"
-        placeholder={message.searchPlaceholder}
-        className={"searchbar searchbar--" + variant}
+    <div className="searchbox">
+      <Header
+        changeLang={lg => changeLang(lg)}
+        lang={lang}
+        inputFocused={inputFocused}
       />
-      {/* {inputFocused ? <History /> : null} */}
+      <div className="searchbar__input">
+        <input
+          onBlur={() => changeInputFocused(false)}
+          onFocus={() => changeInputFocused(true)}
+          type="text"
+          placeholder={message.searchPlaceholder}
+          className="searchbar"
+          value={text}
+          onChange={e => setText(e.target.value)}
+        />
+        <Button
+          onClick={() => {
+            fetchWord(word)
+            fetchTranslation(translation)
+          }}
+          variant={"primary"}
+        >
+          {message.search}
+        </Button>
+      </div>
     </div>
   )
 }

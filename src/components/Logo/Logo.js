@@ -9,6 +9,7 @@ function Logo({ variant }) {
     <div>
       <h1 className={"logo logo--" + variant}>Dictionary</h1>
       <select
+        className="header__select"
         value={locale}
         onChange={e => {
           changeLang(e.target.value)

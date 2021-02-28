@@ -1,0 +1,23 @@
+.button {
+  border: none;
+  outline: none;
+}
+
+.button--primary {
+  padding: 1rem 2rem;
+  width: 10rem;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0.8rem;
+  right: 1.5rem;
+}
+
+.button--secondary {
+  padding: 15px 15px;
+  width: 12rem;
+}
+
+.button--secondary--active {
+  border-bottom: 2px solid skyblue;
+  color: skyblue;
+}
