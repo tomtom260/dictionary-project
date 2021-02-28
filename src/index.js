@@ -3,10 +3,13 @@ import ReactDOM from "react-dom"
 
 import SearchPage from "./pages/SearchPage"
 import "./App.css"
+import IntlProvider from "./translations/IntlProvider"
 
 const App = () => (
   <React.StrictMode>
-    <SearchPage />
+    <IntlProvider>
+      <SearchPage />
+    </IntlProvider>
   </React.StrictMode>
 )
 

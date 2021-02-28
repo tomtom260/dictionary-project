@@ -1,9 +1,11 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
+import { intlContext } from "../../translations/IntlProvider"
 import "./Result.css"
 
 function Result({ word, translation }) {
-  const [lang, changeLang] = useState("ENG")
-  const [transTo, changeTransTo] = useState("AMH")
+  const { locale, message } = useContext(intlContext)
+  const [lang, changeLang] = useState(locale)
+  const [transTo, changeTransTo] = useState("am")
 
   return (
     <div className="result">
@@ -12,27 +14,27 @@ function Result({ word, translation }) {
           <button
             className={
               "button--secondary" +
-              (lang === "ENG" ? " button--secondary--active" : "")
+              (lang === "en" ? " button--secondary--active" : "")
             }
-            onClick={() => changeLang("ENG")}
+            onClick={() => changeLang("en")}
           >
             English
           </button>
           <button
             className={
               "button--secondary" +
-              (lang === "SPA" ? " button--secondary--active" : "")
+              (lang === "sp" ? " button--secondary--active" : "")
             }
-            onClick={() => changeLang("SPA")}
+            onClick={() => changeLang("sp")}
           >
             Spanish
           </button>
           <button
             className={
               "button--secondary" +
-              (lang === "FRE" ? " button--secondary--active" : "")
+              (lang === "fr" ? " button--secondary--active" : "")
             }
-            onClick={() => changeLang("FRE")}
+            onClick={() => changeLang("fr")}
           >
             French
           </button>
@@ -44,7 +46,7 @@ function Result({ word, translation }) {
           <p className="result__definition">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.{" "}
           </p>
-          <h2 className="heading--secondary">Examples</h2>
+          <h2 className="heading--secondary">{message.example}</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
@@ -57,27 +59,27 @@ function Result({ word, translation }) {
           <button
             className={
               "button--secondary" +
-              (transTo === "AMH" ? " button--secondary--active" : "")
+              (transTo === "am" ? " button--secondary--active" : "")
             }
-            onClick={() => changeTransTo("AMH")}
+            onClick={() => changeTransTo("am")}
           >
             Amharic
           </button>
           <button
             className={
               "button--secondary" +
-              (transTo === "ORO" ? " button--secondary--active" : "")
+              (transTo === "or" ? " button--secondary--active" : "")
             }
-            onClick={() => changeTransTo("ORO")}
+            onClick={() => changeTransTo("or")}
           >
             Afan Oromo
           </button>
           <button
             className={
               "button--secondary" +
-              (transTo === "TIG" ? " button--secondary--active" : "")
+              (transTo === "tg" ? " button--secondary--active" : "")
             }
-            onClick={() => changeTransTo("TIG")}
+            onClick={() => changeTransTo("tg")}
           >
             Tigrignya
           </button>
@@ -89,7 +91,7 @@ function Result({ word, translation }) {
           <p className="result__definition">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.{" "}
           </p>
-          <h2 className="heading--secondary">Examples</h2>
+          <h2 className="heading--secondary">{message.example}</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
