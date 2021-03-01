@@ -25,6 +25,7 @@
 }
 
 .searchbar__header {
+  position: relative;
 }
 
 .searchbar__header__left {

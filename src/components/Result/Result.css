@@ -2,9 +2,12 @@
   font-size: 1.4rem;
   position: absolute;
   top: 40%;
-  width: 70rem;
+  width: 65rem;
   left: 50%;
   transform: translateX(-50%);
+  border: 2px solid black;
+  border-radius: 0.8rem;
+  overflow: hidden;
 }
 
 .result__word {
@@ -12,11 +15,9 @@
 }
 
 .result__card {
-  border-radius: 2rem;
-  overflow: hidden;
   background-color: #f0f0f0;
   width: 44%;
-  height: 70vh;
+  /* height: 70vh; */
 }
 
 .result__body {
@@ -29,7 +30,6 @@
 
 .result__translation {
   float: right;
-  margin-bottom: 2rem;
 }
 
 .heading--primary {

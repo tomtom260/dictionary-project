@@ -4,6 +4,7 @@ import Logo from "../components/Logo/Logo"
 import SearchBar from "../components/Searchbar/Searchbar"
 import Result from "../components/Result/Result"
 import History from "../components/History/History"
+import Tree from "../components/Tree/Tree"
 
 const SearchPage = () => {
   const [inputFocused, setInputFocused] = useState(true)
@@ -27,9 +28,12 @@ const SearchPage = () => {
         // changeInputFocused={changeInputFocused}
         // inputFocused={inputFocused}
       />
-      {!text ? <History /> : null}
+      {!text && !word && !translation ? <History /> : null}
       {word && translation ? (
-        <Result word={word} translation={translation} />
+        <>
+          <Result word={word} translation={translation} />
+          <Tree />
+        </>
       ) : null}
     </>
   )

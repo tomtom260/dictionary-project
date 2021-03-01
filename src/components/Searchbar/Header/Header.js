@@ -1,5 +1,6 @@
 import React from "react"
 import Button from "../../Button/Button"
+import "./Header.css"
 
 function Header({ inputFocused, changeLang, lang }) {
   return (
@@ -33,9 +34,13 @@ function Header({ inputFocused, changeLang, lang }) {
           French
         </Button>
       </div>
-      {/* <span>&rarr;</span> */}
+      <div className="result__arrow header__arrow">
+        <span>&rarr;</span>{" "}
+      </div>
       <div className="searchbar__header__right">
-        <Button variant="secondary">Amharic</Button>
+        <Button disabled variant="secondary">
+          Amharic
+        </Button>
       </div>
     </div>
   )

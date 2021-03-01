@@ -1,0 +1,32 @@
+.tree-item {
+  padding: 1rem 5rem;
+  margin: 1.5rem 0;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  /* overflow: visible; */
+  border: solid 1px #e2e2e2;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px #000000;
+}
+
+.tree-item h3 {
+  font-weight: 500;
+}
+
+.tree-item--active {
+  border-left: red 3px solid;
+}
+
+.tree-item--active h3,
+.tree-item--active p {
+  font-weight: 700;
+}
+
+/* .tree-item__translation {
+  font-size: 1.2rem;
+}
+
+.heading__tertiary {
+  font-size: 1.8rem;
+} */
