@@ -5,6 +5,7 @@ import SearchBar from "../components/Searchbar/Searchbar"
 import Result from "../components/Result/Result"
 import History from "../components/History/History"
 import Tree from "../components/Tree/Tree"
+import Footer from "../components/Footer/Footer"
 
 const SearchPage = () => {
   const [inputFocused, setInputFocused] = useState(true)
@@ -35,6 +36,7 @@ const SearchPage = () => {
           <Tree />
         </>
       ) : null}
+      <Footer />
     </>
   )
 }

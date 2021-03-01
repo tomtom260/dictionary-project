@@ -1,0 +1,56 @@
+footer {
+  width: 100%;
+  position: absolute;
+  top: 95vh;
+  background-color: black;
+  color: white;
+}
+
+footer h2 {
+  color: grey;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.footer__right {
+  font-size: 1.4rem;
+  width: 50%;
+  float: right;
+  padding: 5rem;
+}
+
+.footer__subscribe {
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  width: 30rem;
+  margin-top: 2rem;
+}
+
+.footer__button {
+  background-color: blue;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: inherit;
+}
+
+.footer__left {
+  padding: 5rem;
+  float: left;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.footer__col {
+  float: left;
+  width: 30%;
+}
+
+.footer__items {
+  margin-bottom: 1rem;
+  /* color: grey; */
+  font-weight: 700;
+}

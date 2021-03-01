@@ -7,11 +7,11 @@ function Tree() {
   return (
     <div className="tree">
       <h2 className="heading__secondary">Nearby words</h2>
-      <TreeItem word="think" translation="asebe" />
-      <TreeItem word="think" translation="asebe" />
-      <TreeItem word="think" translation="asebe" active />
-      <TreeItem word="think" translation="asebe" />
-      <TreeItem word="think" translation="asebe" />
+      <TreeItem word="thank you" translation="አመሰግናለሁ" />
+      <TreeItem word="thank you" translation="አመሰግናለሁ" />
+      <TreeItem word="thank you" translation="አመሰግናለሁ" active />
+      <TreeItem word="thank you" translation="አመሰግናለሁ" />
+      <TreeItem word="thank you" translation="አመሰግናለሁ" />
     </div>
   )
 }
