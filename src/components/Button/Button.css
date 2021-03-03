@@ -20,9 +20,26 @@
 }
 
 .button--secondary {
-  padding: 15px 15px;
+  padding: 1.5rem;
   width: 12rem;
-  /* border-right: 1px solid grey; */
+}
+
+.button--header {
+  padding: 2.8rem;
+  width: 12rem;
+}
+
+.button--header:hover {
+  border-bottom: black solid 5px;
+  background-color: #e0e0e0;
+  color: grey;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .button--secondary--active {

@@ -1,0 +1,57 @@
+.header {
+  position: relative;
+  display: table;
+  clear: both;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  box-shadow: 3px 0px 3px black;
+}
+
+.header__logo {
+  float: left;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.header__language {
+  background-color: #f0f0f0;
+  position: absolute;
+  right: 5rem;
+  top: 0.9rem;
+  font-size: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.header__language--big {
+  width: 20rem;
+  height: auto;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.header__lang-box {
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.header__lang {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem 6rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  /* width: 6rem; */
+}
+
+.header__lang-icon {
+  transform: translateX(-50%) translateY(1.85rem);
+  position: absolute;
+  left: 50%;
+}
