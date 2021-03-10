@@ -38,7 +38,7 @@ function Header({ inputFocused, changeLang, lang }) {
         <span>&rarr;</span>{" "}
       </div>
       <div className="searchbar__header__right">
-        <Button disabled variant="secondary">
+        <Button onClick={() => {}} variant="secondary">
           Amharic
         </Button>
       </div>

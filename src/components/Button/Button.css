@@ -1,10 +1,7 @@
-.button {
+.button,
+button:disabled {
   border: none;
   outline: none;
-}
-
-.button:disabled {
-  background-color: lightblue;
 }
 
 .button--primary {
@@ -14,7 +11,7 @@
   position: absolute;
   bottom: 2.3rem;
   right: 1.5rem;
-  background-color: blue;
+  background-color: black;
   color: white;
   text-align: center;
 }
@@ -22,6 +19,10 @@
 .button--secondary {
   padding: 1.5rem;
   width: 12rem;
+}
+
+.button--primary:disabled {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .button--header {
