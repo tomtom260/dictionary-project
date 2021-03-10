@@ -6,12 +6,14 @@ import HomePage from "./pages/HomePage"
 
 import "./App.css"
 import IntlProvider from "./translations/IntlProvider"
+import LoginPage from "./pages/LoginPage"
 
 const App = () => (
   <React.StrictMode>
     <IntlProvider>
       {/* <SearchPage /> */}
-      <HomePage />
+      {/* <HomePage /> */}
+      <LoginPage />
     </IntlProvider>
   </React.StrictMode>
 )

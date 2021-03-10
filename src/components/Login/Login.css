@@ -1,0 +1,42 @@
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  width: 40rem;
+  height: 70vh;
+  padding: 4rem;
+  font-size: 1.6rem;
+  border-radius: 40px;
+}
+
+.login__input {
+  width: 100%;
+  margin-bottom: 5rem;
+  height: 4rem;
+  color: transparent;
+  display: block;
+  z-index: 10;
+  outline: none;
+}
+
+.login label {
+  position: absolute;
+  transform: translate(30px, 40%);
+  transition: all 0.2s;
+}
+
+.label--focused {
+  transform: translate(30px, -30px) !important;
+}
+
+.button--login {
+  width: 15rem;
+  margin-left: 100px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: white;
+}
