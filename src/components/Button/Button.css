@@ -8,9 +8,6 @@ button:disabled {
   padding: 1.5rem;
   width: 12rem;
   border-radius: 10px;
-  position: absolute;
-  bottom: 2.3rem;
-  right: 1.5rem;
   background-color: black;
   color: white;
   text-align: center;
@@ -28,6 +25,7 @@ button:disabled {
 .button--header {
   padding: 2.8rem;
   width: 12rem;
+  margin-right: 10px;
 }
 
 .button--header:hover {

@@ -15,20 +15,28 @@
   width: 100%;
   margin-bottom: 5rem;
   height: 4rem;
-  color: transparent;
   display: block;
-  z-index: 10;
   outline: none;
+  font-size: 1.3rem;
+  padding: 0 3rem;
+  outline: none;
+  border: none;
+}
+
+.login__input:focus {
+  border-bottom: 1px green solid;
 }
 
 .login label {
   position: absolute;
   transform: translate(30px, 40%);
+  opacity: 0;
   transition: all 0.2s;
 }
 
 .label--focused {
-  transform: translate(30px, -30px) !important;
+  transform: translate(30px, 50px) !important;
+  opacity: 1 !important;
 }
 
 .button--login {
@@ -38,5 +46,6 @@
   border-radius: 10px;
   border: none;
   outline: none;
-  background-color: white;
+  background-color: black;
+  color: white;
 }

@@ -1,0 +1,14 @@
+.edit-page {
+  background-color: red;
+}
+
+.edit__search {
+  width: 50rem;
+  height: 8vh;
+  border-radius: 5px;
+  border: thin black 1px;
+}
+
+.edit-page .button--primary {
+  margin-left: 3rem;
+}

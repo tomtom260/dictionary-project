@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react"
+import { Link } from "react-router-dom"
 import "../Button/Button.css"
 
 import "./Header.css"
@@ -10,7 +11,20 @@ function Header({ variant }) {
   return (
     <div className="header">
       <h1 className="header__logo">Dictionary</h1>
-      <button className="button button--header center">Lessons</button>
+      <nav className="center">
+        <Link to="/login">
+          <button className="button button--header">Login</button>
+        </Link>
+        <Link to="/search">
+          <button className="button button--header">Search</button>
+        </Link>
+        <Link to="/add-entry">
+          <button className="button button--header">Add Entry</button>
+        </Link>
+        <Link to="/edit-entry">
+          <button className="button button--header">Edit Entry</button>
+        </Link>
+      </nav>
       <div
         className={
           langVisible

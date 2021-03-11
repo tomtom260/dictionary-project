@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 
-import Header from "../components/Header/Header"
 import SearchBar from "../components/Searchbar/Searchbar"
 import Result from "../components/Result/Result"
 import History from "../components/History/History"
@@ -19,7 +18,6 @@ const SearchPage = () => {
 
   return (
     <>
-      <Header variant={"secondary"} />
       <SearchBar
         fetchTranslation={fetchTranslation}
         fetchWord={fetchWord}

@@ -15,8 +15,9 @@ function Login() {
         onFocus={() => setEmailFocused(true)}
         onBlur={() => setEmailFocused(false)}
         className="login__input"
-        id="email"
-        type="text"
+        id="Email"
+        type="email"
+        placeholder="Email"
       />
       <label className={passwordFocused ? "label--focused" : null} htmlFor="">
         Password
@@ -27,6 +28,7 @@ function Login() {
         className="login__input"
         id="password"
         type="password"
+        placeholder="Password"
       />
       <button className="button--login">Login</button>
     </div>

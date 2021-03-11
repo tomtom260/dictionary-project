@@ -48,6 +48,12 @@
   border-radius: 3rem;
 }
 
+.searchbar .button--primary {
+  position: absolute;
+  bottom: 2.3rem;
+  right: 1.5rem;
+}
+
 /* .searchbar--primary {
   transform: translate(-50%, -50%);
   position: absolute;
