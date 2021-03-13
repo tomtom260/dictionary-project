@@ -13,10 +13,17 @@
   right: 3rem;
   top: 50%;
   transform: translateY(-50%);
-  background-color: green;
   padding: 2px;
 }
 
-.button-container button {
+.icon-container {
+  width: 2.5rem;
+  height: 2.5rem;
+  /* border-radius: ; */
+}
+
+.icon-container img {
+  height: 2.5rem;
   margin-right: 1rem;
+  cursor: pointer;
 }

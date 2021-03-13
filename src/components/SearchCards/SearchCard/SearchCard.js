@@ -33,8 +33,14 @@ function SearchCard({ word, translation, fetchResult }) {
       <h3>{word}</h3>
       <h2>{translation}</h2>
       <div className="button-container">
-        <button onClick="">Edit</button>
-        <button onClick="">Delete</button>
+        <span className="icon-container">
+          <img src="./edit-icon.png" alt="" />
+        </span>
+        <span className="icon-container">
+          <img src="./delete-icon.png" alt="" />
+        </span>
+        {/* <button onClick="">Edit</button>
+        <button onClick="">Delete</button> */}
       </div>
     </div>
   )

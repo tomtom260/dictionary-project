@@ -77,7 +77,7 @@ function SearchInput({ text, setText, fetchResults, fetchResult }) {
           onChange={e => setText(e.target.value)}
         />
         <Button
-          className="button--search"
+          className="button"
           disabled={text === ""}
           onClick={() => {
             fetchResult(null)
