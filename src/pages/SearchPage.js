@@ -4,18 +4,17 @@ import SearchBar from "../components/Searchbar/Searchbar"
 import Result from "../components/Result/Result"
 import History from "../components/History/History"
 import Tree from "../components/Tree/Tree"
-import Footer from "../components/Footer/Footer"
 import SearchCards from "../components/SearchCards/SearchCards"
 
 const SearchPage = () => {
-  const [inputFocused, setInputFocused] = useState(true)
-  const changeInputFocused = isFocused => {
-    setInputFocused(isFocused)
-  }
+  // const [inputFocused, setInputFocused] = useState(true)
+  // const changeInputFocused = isFocused => {
+  //   setInputFocused(isFocused)
+  // }
 
   const [results, fetchResults] = useState(null)
   const [result, fetchResult] = useState(null)
-
+  const [tree, fetchTree] = useState(null)
   const [text, setText] = useState("")
 
   return (
@@ -29,26 +28,21 @@ const SearchPage = () => {
         // changeInputFocused={changeInputFocused}
         // inputFocused={inputFocused}
       />
-      {
-        !results ? (
-          <History />
-        ) : !result ? (
-          <SearchCards results={results} fetchResult={fetchResult} />
-        ) : (
-          <>
-            <Result result={result} />
-            <Tree />
-            {/* <SearchCards results={results} fetchResult={fetchResult} /> */}
-          </>
-        )
-        // <>
-        //   {/* <Result result={result}  />
-        //   <Tree /> */}
-        //   <SearchCards results={results} fetchResult={fetchResult} />
-        // </>
-      }
-      {/* <SearchCards /> */}
-      {/* <Footer /> */}
+      {!results ? (
+        <History />
+      ) : !result ? (
+        <SearchCards
+          results={results}
+          fetchTree={fetchTree}
+          fetchResult={fetchResult}
+        />
+      ) : (
+        <>
+          <Result result={result} />
+          <Tree tree={tree} fetchResult={fetchResult} />
+          {/* <SearchCards results={results} fetchResult={fetchResult} /> */}
+        </>
+      )}
     </>
   )
 }

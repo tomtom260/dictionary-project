@@ -18,9 +18,6 @@ function Header({ variant }) {
         <Link to="/add-entry">
           <button className="button button--header">Add Entry</button>
         </Link>
-        <Link to="/edit-entry">
-          <button className="button button--header">Edit Entry</button>
-        </Link>
       </nav>
       <div
         className={
@@ -42,7 +39,7 @@ function Header({ variant }) {
                 display: "block",
                 height: "100%",
                 width: "100%",
-                fill: "currentcolor",
+                // fill: "currentcolor",
                 // color: "#f0f0f0",
               }}
             >

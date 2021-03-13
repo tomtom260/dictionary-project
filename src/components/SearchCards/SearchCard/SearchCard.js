@@ -2,12 +2,19 @@ import React from "react"
 import { useHistory } from "react-router-dom"
 import "./SearchCard.css"
 
-function SearchCard({ word, translation, fetchResult }) {
+function SearchCard({ word, translation, fetchResult, fetchTree }) {
   const history = useHistory()
   return (
     <div
       className="search-card"
-      onClick={() =>
+      onClick={() => {
+        fetchTree([
+          { word: "Thank you", translation: "አመሰግናለሁ" },
+          { word: "Thank you", translation: "አመሰግናለሁ" },
+          { word: "Thank you", translation: "አመሰግናለሁ" },
+          { word: "Thank you", translation: "አመሰግናለሁ" },
+          { word: "Thank you", translation: "አመሰግናለሁ" },
+        ])
         fetchResult({
           word: {
             title: "thank you",
@@ -30,7 +37,7 @@ function SearchCard({ word, translation, fetchResult }) {
             ],
           },
         })
-      }
+      }}
     >
       <h3>{word}</h3>
       <h2>{translation}</h2>

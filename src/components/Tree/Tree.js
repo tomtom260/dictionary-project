@@ -3,15 +3,19 @@ import React from "react"
 import "./Tree.css"
 import TreeItem from "./TreeItem/TreeItem"
 
-function Tree() {
+function Tree({ tree, fetchResult }) {
+  console.log(tree)
   return (
     <div className="tree">
       <h2 className="heading__secondary">Nearby words</h2>
-      <TreeItem word="thank you" translation="አመሰግናለሁ" />
-      <TreeItem word="thank you" translation="አመሰግናለሁ" />
-      <TreeItem word="thank you" translation="አመሰግናለሁ" active />
-      <TreeItem word="thank you" translation="አመሰግናለሁ" />
-      <TreeItem word="thank you" translation="አመሰግናለሁ" />
+      {tree.map(({ word, translation }, i) => (
+        <TreeItem
+          active={i === 2}
+          word={word}
+          translation={translation}
+          fetchResult={fetchResult}
+        />
+      ))}
     </div>
   )
 }
