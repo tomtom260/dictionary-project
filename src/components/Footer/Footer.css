@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   position: absolute;
-  top: 98vh;
+  bottom: -400px;
   background-color: black;
   color: white;
 }

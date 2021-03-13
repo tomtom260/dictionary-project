@@ -53,7 +53,7 @@ const translation = {
   pronunciation: "\\thank\\",
 }
 
-function SearchInput({ text, setText, fetchWord, fetchTranslation }) {
+function SearchInput({ text, setText, fetchResults }) {
   const { locale, message } = useContext(intlContext)
   const [lang, changeLang] = useState(locale)
   // const [transTo, changeTransTo] = useState("am")
@@ -79,8 +79,29 @@ function SearchInput({ text, setText, fetchWord, fetchTranslation }) {
         <Button
           disabled={text === ""}
           onClick={() => {
-            fetchWord(word)
-            fetchTranslation(translation)
+            fetchResults([
+              {
+                word: "Wor",
+                translation: "Tran",
+                pronunciation: "/thank/",
+                example:
+                  "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+              },
+              {
+                word: "Word jhb",
+                translation: "slations",
+                pronunciation: "/thank/",
+                example:
+                  "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+              },
+              {
+                word: "Word ill",
+                translation: "There",
+                pronunciation: "/thank/",
+                example:
+                  "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+              },
+            ])
           }}
           variant={"primary"}
         >
