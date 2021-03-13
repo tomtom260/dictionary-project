@@ -57,3 +57,14 @@
   position: absolute;
   left: 50%;
 }
+
+.header__login-box {
+  transform: translateX(-150%);
+  font-size: 13rem;
+  position: absolute;
+  left: 0rem;
+}
+
+.header__login-icon {
+  font-size: 13rem;
+}

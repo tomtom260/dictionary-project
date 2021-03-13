@@ -9,10 +9,9 @@ function Result({ result: { word, translation } }) {
     <div className="result">
       <div className="result__word result__card">
         <div className="result__body">
-          <h1 className="heading--primary">{word.title}</h1>
-          <i className="result__icon">x</i>{" "}
+          <h1 className="heading--result">{word.title}</h1>
           <span className="result__pronunciation">{word.pronunciation}</span>
-          <p className="result__definition">{word.message}</p>
+          <p className="result__definition">{word.definition}</p>
           <h2 className="heading--secondary">{message.example}</h2>
           <p>{word.example[0]}</p>
           <p>{word.example[1]}</p>
@@ -23,12 +22,11 @@ function Result({ result: { word, translation } }) {
       </div>
       <div className="result__translation result__card">
         <div className="result__body">
-          <h1 className="heading--primary">{translation.title}</h1>
-          <i className="result__icon">x</i>{" "}
+          <h1 className="heading--result">{translation.title}</h1>
           <span className="result__pronunciation">
             {translation.pronunciation}
           </span>
-          <p className="result__definition">{translation.definiton}</p>
+          <p className="result__definition">{translation.definition}</p>
           <h2 className="heading--secondary">{message.example}</h2>
           <p>{translation.example[0]}</p>
           <p>{translation.example[1]}</p>

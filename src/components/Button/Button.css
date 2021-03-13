@@ -5,12 +5,19 @@ button:disabled {
 }
 
 .button--primary {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
   padding: 1.5rem;
   width: 12rem;
   border-radius: 10px;
   background-color: black;
   color: white;
   text-align: center;
+}
+
+.button--search {
+  right: 0;
 }
 
 .button--secondary {

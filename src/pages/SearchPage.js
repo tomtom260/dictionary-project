@@ -22,6 +22,7 @@ const SearchPage = () => {
     <>
       <SearchBar
         fetchResults={fetchResults}
+        fetchResult={fetchResult}
         text={text}
         setText={setText}
         // variant={inputFocused ? "secondary" : "primary"}

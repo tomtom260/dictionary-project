@@ -18,7 +18,8 @@
 .result__card {
   background-color: #f0f0f0;
   width: 44%;
-  /* height: 70vh; */
+  height: 60vh;
+  padding: 1rem;
 }
 
 .result__body {
@@ -41,6 +42,14 @@
   margin-bottom: 1rem;
 }
 
+.heading--result {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
+
 .heading--secondary {
   margin-bottom: 1.2rem;
   font-size: 2rem;
@@ -50,7 +59,8 @@
 }
 
 .result__pronunciation {
-  font-weight: 100;
+  font-weight: 300;
+  font-size: 1.6rem;
 }
 
 .result__definition {

@@ -53,7 +53,7 @@ const translation = {
   pronunciation: "\\thank\\",
 }
 
-function SearchInput({ text, setText, fetchResults }) {
+function SearchInput({ text, setText, fetchResults, fetchResult }) {
   const { locale, message } = useContext(intlContext)
   const [lang, changeLang] = useState(locale)
   // const [transTo, changeTransTo] = useState("am")
@@ -77,29 +77,22 @@ function SearchInput({ text, setText, fetchResults }) {
           onChange={e => setText(e.target.value)}
         />
         <Button
+          className="button--search"
           disabled={text === ""}
           onClick={() => {
+            fetchResult(null)
             fetchResults([
               {
                 word: "Wor",
                 translation: "Tran",
-                pronunciation: "/thank/",
-                example:
-                  "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
               },
               {
                 word: "Word jhb",
                 translation: "slations",
-                pronunciation: "/thank/",
-                example:
-                  "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
               },
               {
                 word: "Word ill",
                 translation: "There",
-                pronunciation: "/thank/",
-                example:
-                  "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
               },
             ])
           }}
