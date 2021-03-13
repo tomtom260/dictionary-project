@@ -1,4 +1,8 @@
 .form {
-  height: 85vh !important;
-  top: 55%;
+  height: 90vh !important;
+  top: 58%;
+}
+
+.form .login__input {
+  margin-bottom: 4rem;
 }

@@ -1,7 +1,9 @@
 import React from "react"
+import { useHistory } from "react-router-dom"
 import "./SearchCard.css"
 
 function SearchCard({ word, translation, fetchResult }) {
+  const history = useHistory()
   return (
     <div
       className="search-card"
@@ -34,13 +36,17 @@ function SearchCard({ word, translation, fetchResult }) {
       <h2>{translation}</h2>
       <div className="button-container">
         <span className="icon-container">
-          <img src="./edit-icon.png" alt="" />
+          <img
+            src="./edit-icon.png"
+            alt=""
+            onClick={() => {
+              history.push(`/edit-entry/${word}`)
+            }}
+          />
         </span>
         <span className="icon-container">
-          <img src="./delete-icon.png" alt="" />
+          <img src="./delete-icon.png" alt="" onClick={() => {}} />
         </span>
-        {/* <button onClick="">Edit</button>
-        <button onClick="">Delete</button> */}
       </div>
     </div>
   )

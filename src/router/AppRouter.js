@@ -14,7 +14,7 @@ function AppRouter() {
       <Header />
       <Switch>
         <Route path="/login" component={LoginPage} />
-        <Route path="/edit-entry" component={EditPage} />
+        <Route path="/edit-entry/:name" component={EditPage} />
         <Route path="/add-entry" component={AddPage} />
         <Route path="/search" component={SearchPage} />
         <Route component={HomePage} />
